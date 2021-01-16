@@ -22,6 +22,7 @@ class SimpleApp extends StatefulWidget {
 
 class _SimpleAppState extends State<SimpleApp> {
   var defaultBackgroundColor = Colors.white;
+  var colorBrightness = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +48,18 @@ class _SimpleAppState extends State<SimpleApp> {
           ),
           color: defaultBackgroundColor,
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('Tap!'),
+        onPressed: () {
+          setState(() {
+            Center(
+              child: Container(
+                  color: defaultBackgroundColor = defaultBackgroundColor
+                      .withAlpha(colorBrightness = colorBrightness + 30)),
+            );
+          });
+        },
       ),
     );
   }
