@@ -26,13 +26,17 @@ class _SimpleAppState extends State<SimpleApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Simple Flutter Application'),
+        centerTitle: true,
+      ),
       body: InkWell(
         onTap: () {
           setState(() {
             Center(
               child: Container(
                 color: defaultBackgroundColor =
-                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                Colors.primaries[Random().nextInt(Colors.primaries.length)],
               ),
             );
           });
