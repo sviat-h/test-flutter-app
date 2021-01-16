@@ -37,14 +37,17 @@ class _SimpleAppState extends State<SimpleApp> {
             Center(
               child: Container(
                 color: defaultBackgroundColor =
-                Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                    Colors.primaries[Random().nextInt(Colors.primaries.length)],
               ),
             );
           });
         },
         child: Container(
           child: Center(
-            child: Text('Hey there!'),
+            child: Text(
+              'Hey there!',
+              style: TextStyle(fontSize: 30),
+            ),
           ),
           color: defaultBackgroundColor,
         ),
